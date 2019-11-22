@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="emartscan.emart.com.dao.TestDao">
+
+    <select id="selectById" parameterType="hashmap" resultType="test">
+        SELECT
+            id as id,
+            code as code
+        FROM RECOMMENDS_CAT
+        WHERE ID = #{ID}
+       	AND CODE = #{CODE}
+    </select>
+    
+     <select id="selectAll" parameterType="hashmap" resultType="test">
+        SELECT
+            id as id,
+            code as code
+        FROM RECOMMENDS_CAT
+    </select>
+     <select id="findAll"  resultType="test">
+        SELECT
+            id as id,
+            code as code
+        FROM RECOMMENDS_CAT
+    </select>
+
+</mapper>

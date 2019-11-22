@@ -1,0 +1,26 @@
+# Spring
+spring:  profiles:    active: dev
+
+server:  error:    include-stacktrace: never  port: 8088
+ 
+--- # Thymeleaf
+spring:
+  thymeleaf:
+    servlet:
+      content-type: text/html
+    cache: false
+    encoding: UTF-8
+    
+Globals:
+  ssgpay:
+    aes:
+      key: $!ssg@PreOrder!$
+      iv: 41323334353637383930313233343536
+      mackey: fcdb1d1b18aa6d08324b7d64b71fb76370690e2e
+
+      
+logging:
+  level:
+    jdbc.sqlonly: DEBUG
+    org.springframework.web: DEBUG
+    com.zaxxer.hikari.HikariDataSource: ERROR
