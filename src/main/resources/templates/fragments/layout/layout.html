@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" 
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+	<title>SLAB - Admin</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	 
+	 
+	<!-- Bootstrap core CSS -->
+	<link href="../../../assets/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../../../assets/fonts/css/font-awesome.min.css" rel="stylesheet">
+	<link href="../../../assets/css/custom.min.css" rel="stylesheet">
+	<link href="../../../assets/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+</head>
+<body  class="nav-md">
+  <div class="container body">
+		
+	    <div class="main_container">
+		<div th:insert="fragments/layout/sidemenu :: sidemenu"></div>
+		<div th:insert="fragments/layout/top_nav :: top_nav"></div>
+		
+		<div>
+			<div layout:fragment="contents"></div>
+		</div>
+		
+        <footer>
+          <div class="pull-right">
+            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+          </div>
+          	
+			<script src="../../../assets/js/jquery.min.js"></script>
+			<script src="../../../assets/js/jquery-ui.min.js"></script>
+			<script src="../../../assets/js/bootstrap.bundle.min.js"></script>
+			<script src="../../../assets/js/bootstrap-progressbar.min.js"></script>
+			<script src="../../../assets/js/skycons.js"></script>
+			<script src="../../../assets/js/custom.min.js"></script>
+		
+          <div class="clearfix"></div>
+        </footer>
+		    </div>
+	    
+  </div>
+</body>
+</html>

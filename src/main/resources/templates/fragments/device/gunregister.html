@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html 
+	xmlns:th="http://www.w3.org/1999/xhtml"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorator="fragments/layout/layout" 
+	>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div layout:fragment="contents">
+    <div class="right_col" role="main">
+   	   <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <h3>단말기 관리</h3>
+              </div>
+
+            </div>
+            <div class="clearfix"></div>
+
+            <div class="row">
+              <div class="col-md-12 col-sm-12">
+                <div class="x_panel">
+                  <div class="x_content">
+
+                    <form class="form-horizontal form-label-left" th:action="@{/device/register}" th:object="${device}" method="post" novalidate>
+                 	  <span class="section">건트리거 등록</span>
+					  <!-- 일련번호  -->
+                      <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="id">일련번호 <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6">
+                          <input type="text" id="id" class="form-control" data-validate-length-range="6" data-validate-words="2" name="id" required="required" >
+                        </div>
+                      </div>
+                      <!-- 모델  -->
+                      <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="MODEL">MODEL <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6">
+                          <input type="text" id="model" name="model" required="required" class="form-control">
+                        </div>
+                      </div>
+                      <!-- ETC  -->
+                      <div class="item form-group">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="etc">기타정보 (예: 왕십리점 분출)</label>
+                        <div class="col-md-6 col-sm-6">
+                          <input type="text" id="etc" name="etc" th:value="${device.etc}" class="form-control">
+                        </div>
+                      </div>
+			
+                      <div class="ln_solid"></div>
+                      <div class="form-group">
+                        <div class="col-md-6 offset-md-3">
+                          <button type="submit" class="btn btn-primary">초기화</button>
+                          <button id="send" type="submit" class="btn btn-success">전송</button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+         </div>
+      </div> <!-- End right_col -->
+    </div> <!-- End Fragment -->
+</body>
+</html>

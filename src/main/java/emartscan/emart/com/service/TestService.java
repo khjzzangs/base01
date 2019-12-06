@@ -1,5 +1,9 @@
 package emartscan.emart.com.service;
 
-public interface TestService {
+import java.util.List;
 
+import emartscan.emart.com.model.Device;
+
+public interface TestService {
+	public List<Device> findAll();
 }

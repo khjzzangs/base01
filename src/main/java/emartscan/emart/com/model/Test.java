@@ -2,12 +2,12 @@ package emartscan.emart.com.model;
 
 import java.io.Serializable;
 
+import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.relational.core.mapping.Table;
 
-@Table(value = "RECOMMENDS_CAT")
+@Table(name = "RECOMMENDS_CAT")
 public class Test implements Serializable{
 	
 	private static final long serialVersionUID = 4165017625465232771L;

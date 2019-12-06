@@ -2,10 +2,54 @@
 <html 
 	xmlns:th="http://www.w3.org/1999/xhtml"
 	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-	layout:decorator="fragments/layout/main" 
+	layout:decorator="fragments/layout/layout" 
 	>
+<head>
+	<meta charset="utf-8">
+</head>
 <body>
-    <div layout:fragment="sidemenu">
+    <div layout:fragment="contents">
+	     <div class="right_col" role="main">
+	      	 <h2> 대시보드 화면 입니다. </h2>
+	      	 <div class="row" style="display: inline-block;" >
+	          	<div class="tile_count">
+	            	<div class="col-md-4 col-sm-6  tile_stats_count">
+	              		<span class="count_top"><i class="fa fa-user"></i> &nbsp; 단말기 수량 </span>
+	              		<div class="count" th:text="${deviceCnt}"></div>
+	            	</div>
+	            	<div class="col-md-4 col-sm-6  tile_stats_count">
+	              		<span class="count_top"><i class="fa fa-user"></i> &nbsp; 건트리거 수량 </span>
+	              		<div class="count" th:text="${gunsCnt}"></div>
+            		</div>
+	            	<div class="col-md-4 col-sm-6  tile_stats_count">
+	              		<span class="coznt_top"><i class="fa fa-user"></i> &nbsp; 배터리 충전 거치대 수량 </span>
+	              		<div class="count" th:text="${batteriesCnt}"></div>
+	            	</div>
+            	</div>
+            </div>
+	      	 <br/>
+	      	 <h2>** Todo</h2>
+	      	 <ul>
+	      	 	<li>로그 분석 관리 화면</li>
+      	 	</ul>
+	      	 <br/>
+	      	 <br/>
+	      	 <h2>** Progress</h2>
+	      	 <ul>
+	      	 	<li> 단말의 "건트리거, 배터리 충전 거치대" 관련하여 통합또는 분리하여 테이블관리할지에 대하여 진행중...(로직은 완료) </li>
+	      	 	<li> 양식 등록,수정에 대하여 메시지 추가중...</li>
+	      	 	<li> 부자연스러운 UI화면 개선중...</li>
+	      	 	<li>업무 관리 화면 UI작업중... </li>
+      	 	</ul>
+      	 	<br/>
+	      	<br/>
+      	 	<h2>** complete</h2>
+	      	 <ul>
+	      	 	<li> 부품 전체 조회.</li>
+	      	 	<li> 단말기 등록 /수정.</li>
+	      	 	<li> 단말기의 삭제는 플랫폼에 영향이 있어서 임시적으로 DB삭제를 원칙으로 합니다.</li>
+      	 	</ul>
+	      </div>
     </div>
 </body>
 </html>
